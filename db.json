@@ -1,22 +1,27 @@
 {
   "events": [
     {
-      "id": 5928101,
+      "id": 1,
       "user": {
-        "id": "abc123",
-        "name": "Adam"
+        "id": "1",
+        "name": "David Lopez"
       },
       "category": "animal welfare",
       "organizer": "Adam",
       "title": "Cat Cabaret",
       "description": "Yay felines!",
       "location": "Meow Town",
-      "date": "2019-01-03T21:54:00.000Z",
+      "date": "April 18th, 202",
       "time": "2:00",
-      "attendees": []
+      "attendees": [
+        { "id": "abc123", "name": "Adam Jahr" },
+        { "id": "def456", "name": "Greg Pollack" },
+        { "id": "ghi789", "name": "Beth Swanson" },
+        { "id": "jkl101", "name": "Mary Gordon" }
+      ]
     },
     {
-      "id": 8419988,
+      "id": 2,
       "user": {
         "id": "abc123",
         "name": "Adam"
@@ -25,10 +30,13 @@
       "organizer": "Adam",
       "title": "Kitty Cluster",
       "description": "Yay cats!",
-      "location": "Catlandia",
-      "date": "2019-01-31T22:09:00.000Z",
+      "location": "132 N Magnolia Street, Orlando, Florida",
+      "date": "April 27th, 2020",
       "time": "7:00",
-      "attendees": []
+      "attendees": [
+        { "id": "abc123", "name": "Adam Jahr" },
+        { "id": "jkl101", "name": "Mary Gordon" }
+      ]
     },
     {
       "id": 4582797,
@@ -41,9 +49,14 @@
       "title": "Puppy Parade",
       "description": "Yay pups!",
       "location": "Puptown ",
-      "date": "2019-02-02T23:27:00.000Z",
+      "date": "July 4th, 2020",
       "time": "1:00",
-      "attendees": []
+      "attendees": [
+        { "id": "abc123", "name": "Adam Jahr" },
+        { "id": "def456", "name": "Greg Pollack" },
+        { "id": "ghi789", "name": "Beth Swanson" },
+        { "id": "jkl101", "name": "Mary Gordon" }
+      ]
     }
   ]
 }
