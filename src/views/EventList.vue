@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable prettier/prettier */
 <template>
   <div>
     <h1>Events Listings</h1>
@@ -11,24 +11,24 @@
 </template>
 
 <script>
-import EventCard from "../components/EventCard";
-import EventService from "../services/EventService.js";
+import EventService from '../services/EventService'
+import EventCard from '../components/EventCard.vue'
 
 export default {
-  components: { EventCard: EventCard },
+  components: { EventCard },
   data() {
     return {
-      events: [],
-    };
+      events: []
+    }
   },
   created() {
     EventService.getEvents()
-      .then((response) => {
-        this.events = response.data;
+      .then(response => {
+        this.events = response.data
       })
-      .catch((error) => {
-        console.log("There was an error:", error.response);
-      });
-  },
-};
+      .catch(error => {
+        console.log('There was an error:', error.response)
+      })
+  }
+}
 </script>

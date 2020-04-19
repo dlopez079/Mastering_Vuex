@@ -15,9 +15,9 @@
 <script>
 export default {
   props: {
-    event: Object,
-  },
-};
+    event: Object
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style lang="scss">
@@ -20,7 +20,7 @@ export default {};
   height: 60px;
 }
 .nav > .brand {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1.5em;
   color: #39b982;
