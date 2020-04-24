@@ -15,7 +15,7 @@ export default {
   computed: mapState({
     userName: state => state.user.name,
     userID: state => state.user.id,
-    categories: state => state.categories
+    categories: 'categories'
   })
 }
 </script>
