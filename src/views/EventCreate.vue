@@ -6,6 +6,7 @@
     <ul>
       <li v-for="cat in categories" :key="cat">{{ cat }}</li>
     </ul>
+    <p>This are {{ catLength }} categories.</p>
   </div>
 </template>
 
@@ -17,7 +18,12 @@ export default {
     catLength() {
       return this.$store.getters.catLength
     },
-    ...mapState(['user', 'categories'])
+    ...mapState(['user', 'categories', 'count'])
+  },
+  method: {
+    incrementCount() {
+      this.$store.commit('INCREMENT_COUNT')
+    }
   }
 }
 </script>
