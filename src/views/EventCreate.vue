@@ -1,7 +1,10 @@
 <template>
   <div>
     <h1>Create an Event, {{ userName }}</h1>
-    <p>This event was created by {{ userName }}.</p>
+    <p>This event was created by {{ userID }}.</p>
+    <ul>
+      <li v-for="cat in categories" :key="cat">{{ cat }}</li>
+    </ul>
   </div>
 </template>
 
@@ -10,9 +13,9 @@ import { mapState } from 'vuex'
 
 export default {
   computed: mapState({
-    userName() {
-      return this.$store.state.user.namek
-    }
+    userName: state => state.user.name,
+    userID: state => state.user.id,
+    categories: state => state.categories
   })
 }
 </script>
