@@ -6,7 +6,7 @@
     <ul>
       <li v-for="cat in categories" :key="cat">{{ cat }}</li>
     </ul>
-    <p>The count increases by on: {{ catLength }} .</p>
+    <p>This are {{ catLength }} categories.</p>
   </div>
 </template>
 
