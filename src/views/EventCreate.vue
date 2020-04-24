@@ -16,7 +16,8 @@ export default {
     catLength() {
       return this.$store.categories.length
     },
-  ...mapState(['user', 'categories'])
+    ...mapState(['user', 'categories'])
+  }
 }
 </script>
 
