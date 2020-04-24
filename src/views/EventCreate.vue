@@ -6,7 +6,7 @@
     <ul>
       <li v-for="cat in categories" :key="cat">{{ cat }}</li>
     </ul>
-    <button @click="incrementCount">Increment</button>
+    <p>The count increases by on: {{ catLength }} .</p>
   </div>
 </template>
 
@@ -18,9 +18,13 @@ export default {
     catLength() {
       return this.$store.getters.catLength
     },
-    ...mapState(['user', 'categories'])
+    ...mapState(['user', 'categories', 'count'])
   },
-  method: {}
+  method: {
+    incrementCount() {
+      this.$store.commit('INCREMENT_COUNT')
+    }
+  }
 }
 </script>
 
