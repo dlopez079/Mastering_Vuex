@@ -9,10 +9,11 @@
 import { mapState } from 'vuex'
 
 export default {
-    computed: mapState({
-        userName: state => state.user.name,
-        categories: state => state.categories
-    })
+  computed: mapState({
+    userName() {
+      return this.$store.state.user.namek
+    }
+  })
 }
 </script>
 
