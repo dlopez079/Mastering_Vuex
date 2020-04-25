@@ -17,7 +17,11 @@ export default new Vuex.Store({
     ],
     count: 0
   },
-  mutations: {},
+  mutations: {
+    IMCREMENT_COUNT(state) {
+      state.count += 1
+    }
+  },
   actions: {},
   modules: {},
   getters: {
