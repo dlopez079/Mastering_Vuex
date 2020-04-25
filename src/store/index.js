@@ -14,14 +14,9 @@ export default new Vuex.Store({
       'education',
       'food',
       'community'
-    ],
-    count: 0
+    ]
   },
-  mutations: {
-    IMCREMENT_COUNT(state) {
-      state.count += 1
-    }
-  },
+  mutations: {},
   actions: {},
   modules: {},
   getters: {

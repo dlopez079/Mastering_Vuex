@@ -18,13 +18,9 @@ export default {
     catLength() {
       return this.$store.getters.catLength
     },
-    ...mapState(['user', 'categories', 'count'])
+    ...mapState(['user', 'categories'])
   },
-  method: {
-    incrementCount() {
-      this.$store.commit('INCREMENT_COUNT')
-    }
-  }
+  methods: {}
 }
 </script>
 
