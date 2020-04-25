@@ -14,7 +14,8 @@ export default new Vuex.Store({
       'education',
       'food',
       'community'
-    ]
+    ],
+    count: 0
   },
   mutations: {},
   actions: {},
