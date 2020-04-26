@@ -56,6 +56,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import Datepicker from 'vuejs-datepicker'
 
 export default {
   computed: {
@@ -64,7 +65,40 @@ export default {
     },
     ...mapState(['user', 'categories'])
   },
-  methods: {}
+  components: {
+    Datepicker
+  },
+  data() {
+    const times = []
+    // eslint-disable-next-line no-plusplus
+    for (let i = 1; i <= 24; i++) {
+      // eslint-disable-next-line prefer-template
+      times.push(i + ':00')
+    }
+    return {
+      event: this.createFreshEvent(),
+      times,
+      categories: this.$store.state.categories
+    }
+  },
+  methods: {
+    createFreshEvent() {
+      // eslint-disable-next-line prefer-destructuring
+      const user = this.$store.state.user
+      // eslint-disable-next-line no-unused-vars
+      const id = Math.floor(Math.random() * 10000000)
+      return {
+        category: '',
+        organizer: user,
+        title: '',
+        description: '',
+        location: '',
+        date: '',
+        time: '',
+        attendees: []
+      }
+    }
+  }
 }
 </script>
 
