@@ -16,7 +16,11 @@ export default new Vuex.Store({
       'community'
     ]
   },
-  mutations: {},
+  mutations: {
+    ADD_EVENT(state, event) {
+      state.events.push(event)
+    }
+  },
   actions: {},
   modules: {},
   getters: {
