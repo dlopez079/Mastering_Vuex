@@ -50,16 +50,9 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import Datepicker from 'vuejs-datepicker'
 
 export default {
-  computed: {
-    catLength() {
-      return this.$store.getters.catLength
-    },
-    ...mapState(['user', 'categories'])
-  },
   components: {
     Datepicker
   },
@@ -71,28 +64,12 @@ export default {
       times.push(i + ':00')
     }
     return {
-      event: this.createFreshEvent(),
       times,
-      categories: this.$store.state.categories
+      categories: this.$store.state.categories,
+      event: this.createFreshEventObject()
     }
   },
   methods: {
-    createFreshEvent() {
-      // eslint-disable-next-line prefer-destructuring
-      const user = this.$store.state.user
-      // eslint-disable-next-line no-unused-vars
-      const id = Math.floor(Math.random() * 10000000)
-      return {
-        category: '',
-        organizer: user,
-        title: '',
-        description: '',
-        location: '',
-        date: '',
-        time: '',
-        attendees: []
-      }
-    },
     createEvent() {
       this.$store
         .dispatch('createEvent', this.event)
@@ -106,6 +83,25 @@ export default {
         .catch(() => {
           console.log('There was a problem creating your event.')
         })
+    },
+    createFreshEventObject() {
+      // eslint-disable-next-line prefer-destructuring
+      const user = this.$store.state.user
+      const id = Math.floor(Math.random() * 10000000)
+      return {
+        // eslint-disable-next-line object-shorthand
+        id: id,
+        // eslint-disable-next-line object-shorthand
+        user: user,
+        category: '',
+        organizer: user,
+        title: '',
+        description: '',
+        location: '',
+        date: '',
+        time: '',
+        attendees: []
+      }
     }
   }
 }
