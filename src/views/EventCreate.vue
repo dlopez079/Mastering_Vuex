@@ -7,6 +7,7 @@
       <li v-for="cat in categories" :key="cat">{{ cat }}</li>
     </ul>
     <p>This are {{ catLength }} categories.</p>
+
     <form>
       <label>Select a category</label>
       <select v-model="event.category">
