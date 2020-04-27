@@ -1,14 +1,8 @@
 <template>
   <div>
-    <h1>Create an Event, {{ user.name }}</h1>
-    <p>This event was created by {{ user.id }}.</p>
-    <p>This are {{ catLength }} categories.</p>
-    <ul>
-      <li v-for="cat in categories" :key="cat">{{ cat }}</li>
-    </ul>
-    <p>This are {{ catLength }} categories.</p>
+    <h1>Create an Event</h1>
 
-    <form>
+    <form @submit.prevent="createEvent">
       <label>Select a category</label>
       <select v-model="event.category">
         <option v-for="cat in categories" :key="cat">{{ cat }}</option>
@@ -56,16 +50,9 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import Datepicker from 'vuejs-datepicker'
 
 export default {
-  computed: {
-    catLength() {
-      return this.$store.getters.catLength
-    },
-    ...mapState(['user', 'categories'])
-  },
   components: {
     Datepicker
   },
@@ -77,18 +64,35 @@ export default {
       times.push(i + ':00')
     }
     return {
-      event: this.createFreshEvent(),
       times,
-      categories: this.$store.state.categories
+      categories: this.$store.state.categories,
+      event: this.createFreshEventObject()
     }
   },
   methods: {
-    createFreshEvent() {
+    createEvent() {
+      this.$store
+        .dispatch('createEvent', this.event)
+        .then(() => {
+          this.$router.push({
+            name: 'event-show',
+            params: { id: this.event.id }
+          })
+          this.event = this.createFreshEventObject()
+        })
+        .catch(() => {
+          console.log('There was a problem creating your event.')
+        })
+    },
+    createFreshEventObject() {
       // eslint-disable-next-line prefer-destructuring
       const user = this.$store.state.user
-      // eslint-disable-next-line no-unused-vars
       const id = Math.floor(Math.random() * 10000000)
       return {
+        // eslint-disable-next-line object-shorthand
+        id: id,
+        // eslint-disable-next-line object-shorthand
+        user: user,
         category: '',
         organizer: user,
         title: '',
