@@ -14,10 +14,22 @@
       "date": "April 18th, 202",
       "time": "2:00",
       "attendees": [
-        { "id": "abc123", "name": "Adam Jahr" },
-        { "id": "def456", "name": "Greg Pollack" },
-        { "id": "ghi789", "name": "Beth Swanson" },
-        { "id": "jkl101", "name": "Mary Gordon" }
+        {
+          "id": "abc123",
+          "name": "Adam Jahr"
+        },
+        {
+          "id": "def456",
+          "name": "Greg Pollack"
+        },
+        {
+          "id": "ghi789",
+          "name": "Beth Swanson"
+        },
+        {
+          "id": "jkl101",
+          "name": "Mary Gordon"
+        }
       ]
     },
     {
@@ -34,8 +46,14 @@
       "date": "April 27th, 2020",
       "time": "7:00",
       "attendees": [
-        { "id": "abc123", "name": "Adam Jahr" },
-        { "id": "jkl101", "name": "Mary Gordon" }
+        {
+          "id": "abc123",
+          "name": "Adam Jahr"
+        },
+        {
+          "id": "jkl101",
+          "name": "Mary Gordon"
+        }
       ]
     },
     {
@@ -52,11 +70,51 @@
       "date": "July 4th, 2020",
       "time": "1:00",
       "attendees": [
-        { "id": "abc123", "name": "Adam Jahr" },
-        { "id": "def456", "name": "Greg Pollack" },
-        { "id": "ghi789", "name": "Beth Swanson" },
-        { "id": "jkl101", "name": "Mary Gordon" }
+        {
+          "id": "abc123",
+          "name": "Adam Jahr"
+        },
+        {
+          "id": "def456",
+          "name": "Greg Pollack"
+        },
+        {
+          "id": "ghi789",
+          "name": "Beth Swanson"
+        },
+        {
+          "id": "jkl101",
+          "name": "Mary Gordon"
+        }
       ]
+    },
+    {
+      "category": "",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Baseball Round 1",
+      "description": "Playing the first round of the playoffs",
+      "location": "New York",
+      "date": "2020-04-09T21:19:00.000Z",
+      "time": "3:00",
+      "attendees": [],
+      "id": 4
+    },
+    {
+      "category": "community",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Baseball Round 1",
+      "description": "Playing the first round of the playoffs",
+      "location": "New York",
+      "date": "2020-04-09T21:19:00.000Z",
+      "time": "3:00",
+      "attendees": [],
+      "id": 5
     }
   ]
 }
