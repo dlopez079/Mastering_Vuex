@@ -115,6 +115,20 @@
       "time": "3:00",
       "attendees": [],
       "id": 5
+    },
+    {
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Battle Bats",
+      "description": "A bat fight",
+      "location": "Australia",
+      "date": "2020-04-09T21:29:00.000Z",
+      "time": "4:00",
+      "attendees": [],
+      "id": 6
     }
   ]
 }
