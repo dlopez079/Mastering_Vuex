@@ -1,12 +1,6 @@
 <template>
   <div>
-    <h1>Create an Event, {{ user.name }}</h1>
-    <p>This event was created by {{ user.id }}.</p>
-    <p>This are {{ catLength }} categories.</p>
-    <ul>
-      <li v-for="cat in categories" :key="cat">{{ cat }}</li>
-    </ul>
-    <p>This are {{ catLength }} categories.</p>
+    <h1>Create an Event</h1>
 
     <form @submit.prevent="createEvent">
       <label>Select a category</label>
