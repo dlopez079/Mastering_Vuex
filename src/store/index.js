@@ -26,8 +26,8 @@ export default new Vuex.Store({
     createEvent({ commit }, event) {
       EventService.postEvent(event)
       commit('ADD_EVENT', event)
-  })
-},
+    }
+  },
   modules: {},
   getters: {
     catLength: state => {
