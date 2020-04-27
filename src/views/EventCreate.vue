@@ -50,7 +50,12 @@
           <option v-for="time in times" :key="time">{{ time }}</option>
         </select>
       </div>
-      <input type="submit" class="button -fill-gradient" value="Submit" />
+      <input
+        @submit.prevent="createEvent"
+        type="submit"
+        class="button -fill-gradient"
+        value="Submit"
+      />
     </form>
   </div>
 </template>
@@ -98,6 +103,9 @@ export default {
         time: '',
         attendees: []
       }
+    },
+    createEvent() {
+      this.$store.dispatch('createEvent', this.event)
     }
   }
 }
