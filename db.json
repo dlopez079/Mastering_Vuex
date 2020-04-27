@@ -129,6 +129,20 @@
       "time": "4:00",
       "attendees": [],
       "id": 6
+    },
+    {
+      "category": "food",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Steak Lovers",
+      "description": "Event where they have a lot of steaks",
+      "location": "Orlando",
+      "date": "2020-04-08T21:49:00.000Z",
+      "time": "6:00",
+      "attendees": [],
+      "id": 7
     }
   ]
 }
