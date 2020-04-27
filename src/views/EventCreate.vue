@@ -8,7 +8,7 @@
     </ul>
     <p>This are {{ catLength }} categories.</p>
 
-    <form>
+    <form @submit.prevent="createEvent">
       <label>Select a category</label>
       <select v-model="event.category">
         <option v-for="cat in categories" :key="cat">{{ cat }}</option>
@@ -50,12 +50,7 @@
           <option v-for="time in times" :key="time">{{ time }}</option>
         </select>
       </div>
-      <input
-        @submit.prevent="createEvent"
-        type="submit"
-        class="button -fill-gradient"
-        value="Submit"
-      />
+      <input type="submit" class="button -fill-gradient" value="Submit" />
     </form>
   </div>
 </template>
