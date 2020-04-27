@@ -31,8 +31,8 @@ export default new Vuex.Store({
   },
   modules: {},
   getters: {
-    catLength: state => {
-      return state.categories.length
+    getEventById: state => id => {
+      return state.events.find(event => event.id === id)
     }
   }
 })
