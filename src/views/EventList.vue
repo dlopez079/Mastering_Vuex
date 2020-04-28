@@ -30,6 +30,7 @@ export default {
     EventCard
   },
   created() {
+    this.perPage = 3
     this.$store.dispatch('fetchEvents', {
       perPage: 3,
       page: this.page
@@ -40,7 +41,10 @@ export default {
       // eslint-disable-next-line radix
       return parseInt(this.$route.query.page) || 1
     },
-    ...mapState(['events'])
+    hasNextPage() {
+      return this.eventsTotal > this.page * this.perPage
+    },
+    ...mapState(['events', 'eventsTotal'])
   }
 }
 </script>
