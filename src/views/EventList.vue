@@ -11,24 +11,16 @@
 </template>
 
 <script>
-import EventCard from '../components/EventCard.vue'
 import { mapState } from 'vuex'
+import EventCard from '../components/EventCard.vue'
 
 export default {
-  components: { EventCard },
-  data() {
-    return {
-      events: []
-    }
+  components: {
+    EventCard
   },
   created() {
-    EventService.getEvents()
-      .then(response => {
-        this.events = response.data
-      })
-      .catch(error => {
-        console.log('There was an error:', error.response)
-      })
-  }
+    this.$store.dispatch('fetchEvents')
+  },
+  computed: mapState(['events'])
 }
 </script>
