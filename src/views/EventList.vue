@@ -15,9 +15,13 @@
       >
       |
     </template>
-    <router-link :to="{ name: 'event-list', query: { page: page + 1 } }"
-      >Next Page</router-link
-    >
+    <template v-if="(page = eventsTotal)"
+      ><router-link
+        :to="{ name: 'event-list', query: { page: page + 1 } }"
+        rel="next"
+        >Next Page</router-link
+      >
+    </template>
   </div>
 </template>
 
