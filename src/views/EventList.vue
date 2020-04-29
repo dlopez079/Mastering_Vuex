@@ -19,6 +19,7 @@
     </template>
 
     <router-link
+      v-if="hasNextPage"
       :to="{ name: 'event-list', query: { page: page + 1 } }"
       rel="next"
     >
