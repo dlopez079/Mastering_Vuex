@@ -15,7 +15,7 @@
       >
       |
     </template>
-    <template v-if="(page = eventsTotal)"
+    <template
       ><router-link
         :to="{ name: 'event-list', query: { page: page + 1 } }"
         rel="next"
@@ -34,7 +34,6 @@ export default {
     EventCard
   },
   created() {
-    this.perPage = 3
     this.$store.dispatch('fetchEvents', {
       perPage: 3,
       page: this.page
