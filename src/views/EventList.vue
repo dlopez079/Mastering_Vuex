@@ -15,6 +15,7 @@
       >
         Prev Page</router-link
       >
+      <template v-if="hasNextPage"> | </template>
     </template>
 
     <router-link
