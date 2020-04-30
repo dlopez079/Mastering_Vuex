@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 <template>
   <div>
-    <h1>Events Listings</h1>
+    <h1>Events for {{ user.name }}</h1>
     <EventCard
       v-for="event in events"
       :key="event.id"
