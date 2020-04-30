@@ -13,9 +13,9 @@ import { mapState } from 'vuex'
 import NotificationBar from './NotificationBar.vue'
 
 export default {
-  components: { NotificationBar }
-},
-computed:mapState('notification', ['notifications'])
+  components: { NotificationBar },
+  computed: mapState('notification', ['notifications'])
+}
 </script>
 
 <style lang="scss" scoped>

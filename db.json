@@ -357,6 +357,24 @@
       "date": "",
       "time": "",
       "attendees": []
+    },
+    {
+      "id": 7240912,
+      "user": {
+        "id": "abc123",
+        "name": "David"
+      },
+      "category": "",
+      "organizer": {
+        "id": "abc123",
+        "name": "David"
+      },
+      "title": "Success",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }
