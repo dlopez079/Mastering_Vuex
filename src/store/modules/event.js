@@ -45,7 +45,12 @@ export const actions = {
         commit('SET_EVENTS', response.data)
       })
       .catch(error => {
-        console.log('There was an error:', error.response)
+        const notification = {
+          type: 'error',
+          message: `There was a problem fetching events: ${error.message}`
+        }
+        // eslint-disable-next-line no-undef
+        dispatch('notification/add', notification, { root: true })
       })
   },
 
