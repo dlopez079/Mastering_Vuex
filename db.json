@@ -339,6 +339,24 @@
       "date": "2020-04-22T14:51:00.000Z",
       "time": "15:00",
       "attendees": []
+    },
+    {
+      "id": 3651664,
+      "user": {
+        "id": "abc123",
+        "name": "David"
+      },
+      "category": "",
+      "organizer": {
+        "id": "abc123",
+        "name": "David"
+      },
+      "title": "success",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }
