@@ -43,6 +43,7 @@ export default {
       page: this.page
     })
   },
+
   computed: {
     page() {
       // eslint-disable-next-line radix
