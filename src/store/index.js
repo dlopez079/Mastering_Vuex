@@ -17,11 +17,16 @@ export default new Vuex.Store({
       'community'
     ],
     events: [],
-    eventsTotal: 0
+    eventsTotal: 0,
+    event: []
   },
   mutations: {
     ADD_EVENT(state, event) {
       state.events.push(event)
+    },
+    SET_EVENT(state, event) {
+      // eslint-disable-next-line no-param-reassign
+      state.event = event
     },
     SET_EVENTS(state, events) {
       // eslint-disable-next-line no-param-reassign
@@ -48,6 +53,16 @@ export default new Vuex.Store({
             parseInt(response.headers['x-total-count'])
           )
           commit('SET_EVENTS', response.data)
+        })
+        .catch(error => {
+          console.log('There was an error:', error.response)
+        })
+    },
+
+    fetchEvent({ commit }, id) {
+      EventService.getEvent(id)
+        .then(response => {
+          commit('SET_EVENT', response.data)
         })
         .catch(error => {
           console.log('There was an error:', error.response)
