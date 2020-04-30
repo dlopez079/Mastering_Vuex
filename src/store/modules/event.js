@@ -6,17 +6,21 @@ export const state = {
   event: {}
 }
 export const mutations = {
+  // eslint-disable-next-line no-shadow
   ADD_EVENT(state, event) {
     state.events.push(event)
   },
+  // eslint-disable-next-line no-shadow
   SET_EVENT(state, event) {
     // eslint-disable-next-line no-param-reassign
     state.event = event
   },
+  // eslint-disable-next-line no-shadow
   SET_EVENTS(state, events) {
     // eslint-disable-next-line no-param-reassign
     state.events = events
   },
+  // eslint-disable-next-line no-shadow
   SET_EVENTS_TOTAL(state, eventsTotal) {
     // eslint-disable-next-line no-param-reassign
     state.eventsTotal = eventsTotal
@@ -56,6 +60,7 @@ export const actions = {
   }
 }
 export const getters = {
+  // eslint-disable-next-line no-shadow
   getEventById: state => id => {
     return state.events.find(event => event.id === id)
   }
